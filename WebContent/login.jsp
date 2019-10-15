@@ -23,7 +23,7 @@ integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlA
        			${errorMessage}
               <div class="form-group">
                     <label for="userName"></label>
-                    <input type="text" name="email" class="form-control" placeholder="Email">
+                    <input type="text" name="userName" class="form-control" placeholder="Username">
               </div>
               <div class="form-group">
                     <label for="Password">Password</label>
@@ -32,9 +32,9 @@ integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlA
               <!-- Google Captcha -->
               <div class="g-recaptcha" data-sitekey="6LdxaLwUAAAAABSmeSGd3gYONEUsKdV6fql5AuKh"></div>
                     <button type="submit" name="btnLogin" class="btn btn-primary">Login</button>
-                    <button type="submit" name="btnRegister" class="btn btn-primary">Register</button>
+                    <a href="register.jsp"><button type="button" name="btnRegister" class="btn btn-primary">Register</button></a>
                <div class="form-group">
-                    <a href="a">Forgot your password?</a>
+                    <a href="">Forgot your password?</a>
                </div>
          </form>
     </div>
