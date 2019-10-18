@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet"
  integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
+ <link rel="icon" type="image/png" href="https://img.icons8.com/dusk/64/000000/hearts.png"> 
 <!-- CSS file -->
 <link rel="stylesheet" href="assets/style.css">
 <title>Confirmation Page</title>
