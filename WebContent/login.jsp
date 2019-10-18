@@ -12,7 +12,7 @@ integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlA
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <style>
 	div .container form{
-		margin-top:5	
+		margin-top:10;
 	}
 </style>
 </head>
@@ -22,8 +22,8 @@ integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlA
        <form action="LoginServlet" method="POST">
        			${errorMessage}
               <div class="form-group">
-                    <label for="userName"></label>
-                    <input type="text" name="userName" class="form-control" placeholder="Username">
+                    <label for="Email">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Email">
               </div>
               <div class="form-group">
                     <label for="Password">Password</label>

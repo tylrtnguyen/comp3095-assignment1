@@ -40,46 +40,46 @@ integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlA
         <!-- Page Title -->
             
         <!-- Form begins -->
-          <form action="">
+          <form action="RegistrationServlet" method="POST">
           ${errorMessage}
           <div class="form-row">
              <div class="form-group col-md-6">
-                  <label for="FirstName">First Name</label>&nbsp;
+                  <label for="FirstName">First Name${starMark}</label>&nbsp;
                   <input type="text" class="form-control" name="firstName" placeholder="First Name"></input>
              </div>
              <div class="form-group col-md-6">
-                  <label for="LastName">Last Name</label>&nbsp;
+                  <label for="LastName">Last Name${starMark}</label>&nbsp;
                   <input type="text" class="form-control" name="lastName" placeholder="Last Name">
             </div>
             </div>
             <div class="form-group">               
-                <label for="Address">Address</label>            
+                <label for="Address">Address${starMark}</label>            
             	<input type="text" class="form-control" name="address" placeholder="Address">
             </div>
             <div class="form-group">               
-                <label for="Email">Email</label>            
+                <label for="Email">Email${starMark}</label>            
             	<input type="email" class="form-control" name="email" placeholder="Email">
             </div>
               <div class="form-group">               
-                <label for="Email">Password</label>            
+                <label for="Email">Password${starMark}</label>            
             	<input type="password" class="form-control" name="password" placeholder="Password">
             </div>
               <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" class="form-control" name="password" placeholder="Confirm Password">
+                <label for="confirmPassword">Confirm Password${starMark}</label>
+                <input type="password" class="form-control" name="cfPassword" placeholder="Confirm Password">
             </div>
             <div class="form-group row">
               <div class="col-sm-10">
                 <div class="form-check">
-                    <input type="checkbox" name="ToSChecker" class="form-check-input"/>
+                    <input type="checkbox" name="ToSChecker" value="checked" class="form-check-input"/>
                     <label class="form-check-label" for="ToSCheker">
                     I agree to <a href="#">terms of service</a>
                     </label>
                 </div>
               </div>
            </div> 
-          <button ID="btnRegister" class="btn btn-primary" name="btnRegister">Register</button>
-          <button ID="btnCancel" class="btn btn-primary" name="btnCancel">Cancel</button>
+          <button type="submit" class="btn btn-primary" name="btnRegister">Register</button>
+          <button class="btn btn-primary" name="btnCancel">Cancel</button>
         </form>
     <!-- Form ends -->
     </div>
