@@ -4,9 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<!-- Bootswatch theme CDN -->
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet"
+ integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
+<title>Admin Dashboard</title>
 </head>
 <body>
-<h1>Admin home</h1>
-</body>
+<!-- Navigation bar -->
+<%@include file="includes/usernavigation.jsp" %>
+<!-- Jumbotron -->
+<%@include file="includes/body.jsp" %>
+<!-- Footer -->
+<%@include file="includes/footer.jsp" %>
+</body>	
 </html>

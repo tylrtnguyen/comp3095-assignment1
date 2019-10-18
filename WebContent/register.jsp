@@ -2,13 +2,11 @@
     pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-
 <html>
 <head>
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet"
+ integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
     <title>Register</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css" rel="stylesheet" 
-integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlAvt" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         .container{
             margin:2% 20%;
@@ -19,21 +17,7 @@ integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlA
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-           <div class="container-fluid">
-                    <a class="navbar-brand" href="Home">Plus84</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-               <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav navbar-right">                   
-                    <li class="nav-item">
-                        <a class="nav-link" href="Members">Members</a>
-                    </li>
-                </ul>
-            </div>
-          </div>
-       </nav>
+	<%@include file="includes/navigation.jsp" %>
     <h1>REGISTRATION PAGE</h1>
    
     <div class="container">
@@ -71,7 +55,7 @@ integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlA
             <div class="form-group row">
               <div class="col-sm-10">
                 <div class="form-check">
-                    <input type="checkbox" name="ToSChecker" value="checked" class="form-check-input"/>
+                    <input type="checkbox" name="ToSChecker" value="checked " class="form-check-input"/>
                     <label class="form-check-label" for="ToSCheker">
                     I agree to <a href="#">terms of service</a>
                     </label>
@@ -83,5 +67,7 @@ integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlA
         </form>
     <!-- Form ends -->
     </div>
+    <!-- Footer -->
+<%@include file="includes/footer.jsp" %>
 </body>
 </html>

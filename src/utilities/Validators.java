@@ -41,7 +41,7 @@ public class Validators {
 
 	public boolean emailDuplicate(User user) {
 		UserDao emailDup = new UserDao();
-		return emailDup.emailDuplicate(user);
+		return emailDup.emailDuplicate(user.getEmail());
 	}
 	
 	public boolean ToSChecker(String value) {

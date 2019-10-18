@@ -21,7 +21,7 @@ public class UserDao {
 			preparedStatement.setString(2, user.getPassword());
 			
 			// Test preparedStatement
-			System.out.println(preparedStatement);
+//			System.out.println(preparedStatement);
 			ResultSet rs = preparedStatement.executeQuery();
 			userStatus = rs.next();
 		}
@@ -43,7 +43,7 @@ public class UserDao {
 			PreparedStatement iRStatement = con.prepareStatement("select roleID from UserRole"+
 						" where userID IN (select id from Users where email='"+user.getEmail()+"');");
 			
-			System.out.println(iRStatement);
+//			System.out.println(iRStatement);
 			ResultSet rs = iRStatement.executeQuery();
 			if(rs.next()) {
 				roleID = rs.getInt("roleID");
@@ -56,7 +56,32 @@ public class UserDao {
 		return roleID;
 	}
 	
-	
+	public User getUser(String email) {
+		User user = new User();
+		if(emailDuplicate(email)) {
+			try {
+				// Database Initialize
+				Connection con = DatabaseAccess.connectDataBase();
+				// Create a statement to insert new user into database
+				// iR = insertRole
+				PreparedStatement iRStatement = con.prepareStatement("select * from Users"+
+							" where email='"+email+"';");
+				
+				System.out.println(iRStatement);
+				ResultSet rs = iRStatement.executeQuery();
+				if(rs.next()) {
+					user.setFirstName(rs.getString("firstname"));
+					user.setLastName(rs.getString("lastname"));
+					user.setEmail(rs.getString("email"));
+					System.out.println(user.getFirstName());
+				}
+				
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return user;
+	}
 	
 	// Register User
 	public int registerUser(User user) {
@@ -74,7 +99,7 @@ public class UserDao {
 			insert.setString(5, user.getPassword());
 			
 			//Test insert statement
-			System.out.println(insert);
+//			System.out.println(insert);
 			userRegister = insert.executeUpdate();
 			
 		}catch(Exception e) {
@@ -101,18 +126,17 @@ public class UserDao {
 		return result;
 	}
 	
-	public boolean emailDuplicate(User user) {
+	public boolean emailDuplicate(String email) {
 		boolean duplicate = false;
 		try {
 			// Database Initialize
 			Connection con = DatabaseAccess.connectDataBase();
 			// Create a statement to insert new user into database
 			// iR = insertRole
-			PreparedStatement iRStatement = con.prepareStatement("select * from Users where email='"+user.getEmail()+"';");
+			PreparedStatement iRStatement = con.prepareStatement("select * from Users where email='"+email+"';");
 			
 			ResultSet rs = iRStatement.executeQuery();
 			duplicate = rs.next();
-			System.out.println(duplicate);
 			
 		}catch (Exception e) {
 			e.printStackTrace();

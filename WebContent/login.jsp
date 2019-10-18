@@ -6,8 +6,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css" rel="stylesheet" 
-integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlAvt" crossorigin="anonymous">
+<!-- Bootswatch CDN -->
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet"
+ integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
 <title>Login Page</title>
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <style>
@@ -17,6 +18,7 @@ integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlA
 </style>
 </head>
 <body>
+	<%@include file="includes/navigation.jsp" %>
 	<div class="container">
        <h1>LOGIN</h1>
        <form action="LoginServlet" method="POST">
@@ -38,5 +40,7 @@ integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlA
                </div>
          </form>
     </div>
+    <!-- Footer -->
+	<%@include file="includes/footer.jsp" %>
 </body>
 </html>

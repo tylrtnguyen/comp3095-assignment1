@@ -82,7 +82,7 @@ public class RegistrationServlet extends HttpServlet {
 						"  Password and Confirm password don't match" + 
 						"</div>";
 			}
-			else if (registerDao.emailDuplicate(newUser)) {
+			else if (validator.emailDuplicate(newUser)) {
 				errorMessage = "<div class=\"alert alert-danger\" role=\"alert\">\n" + 
 						" The email you entered has been used" + 
 						"</div>";

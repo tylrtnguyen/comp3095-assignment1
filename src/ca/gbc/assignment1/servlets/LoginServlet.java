@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import ca.gbc.assignment1.User;
 import net.tanesha.recaptcha.ReCaptchaImpl;
@@ -29,8 +30,10 @@ public class LoginServlet extends HttpServlet {
     }
 
 
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		 request.getRequestDispatcher("login.jsp").include(request, response); 
+		 HttpSession session = request.getSession();
+		 session.invalidate();
 	}
 
 
@@ -60,8 +63,16 @@ public class LoginServlet extends HttpServlet {
 					if (loginDao.validate(user) && verify) {
 						//Role Validation
 						Integer roleID = loginDao.getRoleID(user);
+						if(roleID == 1) {
+							HttpSession session = request.getSession();
+							session.setAttribute("email", email);
+						}
 						String path = (roleID == 1) ? "adminhome.jsp" : "userhome.jsp";
+						String role = path.equals("adminhome.jsp") ? "Admin" : "User";
 						// Forward to home.jsp
+						user = loginDao.getUser(email);
+						request.setAttribute("role", role);
+						request.setAttribute("name", user.getFirstName());
 						request.getRequestDispatcher(path).forward(request, response);
 					} 
 					else if(!loginDao.validate(user)) {
