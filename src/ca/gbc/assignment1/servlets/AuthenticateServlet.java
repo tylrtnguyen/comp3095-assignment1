@@ -22,7 +22,6 @@ import utilities.VerifyRecaptcha;
  * Description: Authenticate Servlet is to validate users' information
  * based on their submitted email and password
  */
-@WebServlet("/AuthenticateServlet")
 public class AuthenticateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

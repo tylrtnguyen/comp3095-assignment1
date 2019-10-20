@@ -32,6 +32,6 @@
   
  <servlet-mapping>
 	<servlet-name>AuthenticateServlet</servlet-name>
-	<url-pattern>/Authenticate</url-pattern>
+	<url-pattern>/AuthenticateServlet</url-pattern>
 </servlet-mapping>
 </web-app>
