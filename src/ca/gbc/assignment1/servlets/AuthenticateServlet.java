@@ -14,7 +14,13 @@ import utilities.UserDao;
 import utilities.VerifyRecaptcha;
 
 /**
- * Servlet implementation class AuthenticateServlet
+ * Project: Client Tracker
+ * Assignment: Assignment 1
+ * Author: Thong Nguyen
+ * Student Number: 101140366
+ * Date: Oct 20th, 2019
+ * Description: Authenticate Servlet is to validate users' information
+ * based on their submitted email and password
  */
 @WebServlet("/AuthenticateServlet")
 public class AuthenticateServlet extends HttpServlet {

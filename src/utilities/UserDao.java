@@ -1,10 +1,21 @@
 package utilities;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import ca.gbc.assignment1.User;
+
+/**
+ * Project: Client Tracker
+ * Assignment: Assignment 1
+ * Author: Thong Nguyen
+ * Student Number: 101140366
+ * Date: Oct 20th, 2019
+ * Description: UserDao class provides methods that need to
+ * get data from database or write data to database
+ */
 
 public class UserDao {
 	

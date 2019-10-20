@@ -1,6 +1,7 @@
 package utilities;
 
 import java.io.BufferedReader;
+
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,6 +12,17 @@ import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.net.ssl.HttpsURLConnection;
+
+/**
+ * Project: Client Tracker
+ * Assignment: Assignment 1
+ * Author: Thong Nguyen
+ * Student Number: 101140366
+ * Date: Oct 20th, 2019
+ * Description: VerifyRecaptcha class employs the javax.json external
+ * library to read the json file that Goole returns after users finished
+ * their Recaptcha verification
+ */
 
 public class VerifyRecaptcha {
 

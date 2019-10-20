@@ -2,12 +2,17 @@ package utilities;
 
 import ca.gbc.assignment1.User;
 
+/**
+ * Project: Client Tracker
+ * Assignment: Assignment 1
+ * Author: Thong Nguyen
+ * Student Number: 101140366
+ * Date: Oct 20th, 2019
+ * Description: Validators class provides validators for Login 
+ * and Registration forms based on the Validation Requirements
+ */
 public class Validators {
 
-//	public boolean emailValidator(User user) {
-//		String email = user.getEmail();
-//		return email.matches("^[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\\.[a-zA-Z]{2,4}");
-//	}
 	public boolean pwValidator(User user) {
 		String password = user.getPassword();
 		String pattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{6,12}";

@@ -1,6 +1,15 @@
 package ca.gbc.assignment1;
 import java.io.Serializable;
 
+/**
+ * Project: Client Tracker
+ * Assignment: Assignment 1
+ * Author: Thong Nguyen
+ * Student Number: 101140366
+ * Date: Oct 20th, 2019
+ * Description: User class is a JavaBean class which is responsible for 
+ * providing a blueprint when working with user's information
+ */
 public class User implements Serializable{
 	
 	private static final long serialVersionUID = 1L;

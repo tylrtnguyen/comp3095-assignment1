@@ -15,7 +15,16 @@ import utilities.EmailHandling;
 import utilities.UserDao;
 import utilities.Validators;
 
-
+/**
+ * Project: Client Tracker
+ * Assignment: Assignment 1
+ * Author: Thong Nguyen
+ * Student Number: 101140366
+ * Date: Oct 20th, 2019
+ * Description: Registration Servlet is responsible for validating
+ * users' information when they register for a new account and send
+ * a confirmation email for user when they successfully registered
+ */
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

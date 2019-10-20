@@ -7,12 +7,19 @@ import javax.mail.internet.*;
 
 import ca.gbc.assignment1.User;
 
-import java.sql.Date;
 import java.util.Properties;
 
-import javax.activation.*;
 
-
+/**
+ * Project: Client Tracker
+ * Assignment: Assignment 1
+ * Author: Thong Nguyen
+ * Student Number: 101140366
+ * Date: Oct 20th, 2019
+ * Description: EmailHandling class uses javax.mail external library
+ *  to allow the system automatically send users a confirmation email
+ *  when they successfully registered to the system database
+ */
 public class EmailHandling extends Authenticator {
 	public boolean SendEmail(User user) throws MessagingException {
 		//In order to make this function to work, 

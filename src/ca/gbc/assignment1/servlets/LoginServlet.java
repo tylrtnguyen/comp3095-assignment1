@@ -19,7 +19,13 @@ import utilities.UserDao;
 import utilities.VerifyRecaptcha;
 
 /**
- * Servlet implementation class LoginServlet
+ * Project: Client Tracker
+ * Assignment: Assignment 1
+ * Author: Thong Nguyen
+ * Student Number: 101140366
+ * Date: Oct 20th, 2019
+ * Description: Login Servlet is responsible for user login page, 
+ * and the Log out function of the application
  */
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
