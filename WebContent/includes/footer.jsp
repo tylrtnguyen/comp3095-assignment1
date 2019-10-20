@@ -6,7 +6,7 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<div class="copyright">
-							<p>© <span>2019</span> <a href="https://github.com/tylrtnguyen" target="_blank" class="transition">Thong Nguyen</a> All rights reserved.</p>
+							<p>© <span>2019</span> <a href="https://github.com/tylrtnguyen/comp3095-assignment1" target="_blank" class="transition">Thong Nguyen</a> All rights reserved.</p>
 						</div>
 					</div>
 				</div>

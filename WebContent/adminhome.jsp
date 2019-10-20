@@ -11,6 +11,12 @@
 <title>Admin Dashboard</title>
 </head>
 <body>
+<%
+	String name = (String) session.getAttribute("name");
+    if (name == null) {
+    response.sendRedirect("LoginServlet");
+    }
+%>
 <!-- Navigation bar -->
 <%@include file="includes/usernavigation.jsp" %>
 <!-- Jumbotron -->

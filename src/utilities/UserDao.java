@@ -126,6 +126,7 @@ public class UserDao {
 		return result;
 	}
 	
+	// Check if email is duplicated
 	public boolean emailDuplicate(String email) {
 		boolean duplicate = false;
 		try {

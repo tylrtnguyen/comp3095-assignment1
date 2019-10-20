@@ -22,7 +22,7 @@
 	<%@include file="includes/navigation.jsp" %>
 	<div class="container">
        <h1>LOGIN</h1>
-       <form action="LoginServlet" method="POST">
+       <form action="AuthenticateServlet" method="POST">
        			${errorMessage}
               <div class="form-group">
                     <label for="Email">Email</label>
@@ -32,6 +32,7 @@
                     <label for="Password">Password</label>
                     <input type="password" name="password" class="form-control" placeholder="Password">
               </div>
+              <input type="hidden" name="from" value="${pageContext.request.requestURI}">
               <!-- Google Captcha -->
               <div class="g-recaptcha" data-sitekey="6LdxaLwUAAAAABSmeSGd3gYONEUsKdV6fql5AuKh"></div>
                     <button type="submit" name="btnLogin" class="btn btn-primary">Login</button>

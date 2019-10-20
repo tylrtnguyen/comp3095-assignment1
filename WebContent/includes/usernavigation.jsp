@@ -13,9 +13,9 @@
         <a class="nav-link" href="members.jsp">Members</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form action="LoginServlet" class="form-inline my-2 my-lg-0">
 		  <button type="button" class="btn btn-primary">Hello, ${name}</button>
-      <button href="LoginServlet" class="btn btn-secondary my-2 my-sm-0">Logout</button>
+      <button type="submit" class="btn btn-secondary my-2 my-sm-0">Logout</button>
     </form>
   </div>
 </nav>

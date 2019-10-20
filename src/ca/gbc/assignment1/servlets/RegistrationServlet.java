@@ -3,6 +3,7 @@ package ca.gbc.assignment1.servlets;
 import java.io.IOException;
 import java.sql.Connection;
 
+import javax.mail.MessagingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,11 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ca.gbc.assignment1.User;
+import utilities.EmailHandling;
 import utilities.UserDao;
 import utilities.Validators;
 
 
-@WebServlet("/RegistrationServlet")
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -63,6 +64,13 @@ public class RegistrationServlet extends HttpServlet {
 				registerDao.insertRole(newUser);
 				request.setAttribute("fullName",firstName+ " "+lastName);
 				request.setAttribute("email", email);
+				EmailHandling newEmail = new EmailHandling();
+				try {
+					newEmail.SendEmail(newUser);
+				} catch (MessagingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				request.getRequestDispatcher("registrationSuccess.jsp").forward(request, response);
 			}
 			else if(!validator.nameValidator(newUser)) {

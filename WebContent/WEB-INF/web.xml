@@ -3,9 +3,6 @@
   <display-name>COMP3095_Plus84</display-name>
   <welcome-file-list>
     <welcome-file>login.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
  <servlet>
@@ -18,14 +15,23 @@
 	<url-pattern>/LoginServlet</url-pattern>
 </servlet-mapping>
 
-<context-param>
-    <param-name>user</param-name>
-    <param-value>thong17</param-value>
-</context-param>
+ <servlet>
+  <servlet-name>RegistrationServlet</servlet-name>
+  <servlet-class>ca.gbc.assignment1.servlets.RegistrationServlet</servlet-class>
+</servlet> 
+  
+ <servlet-mapping>
+	<servlet-name>RegistrationServlet</servlet-name>
+	<url-pattern>/RegistrationServlet</url-pattern>
+</servlet-mapping>
 
-<context-param>
-    <param-name>password</param-name>
-    <param-value>thong17</param-value>
-</context-param>
-
+ <servlet>
+  <servlet-name>AuthenticateServlet</servlet-name>
+  <servlet-class>ca.gbc.assignment1.servlets.AuthenticateServlet</servlet-class>
+</servlet> 
+  
+ <servlet-mapping>
+	<servlet-name>AuthenticateServlet</servlet-name>
+	<url-pattern>/Authenticate</url-pattern>
+</servlet-mapping>
 </web-app>

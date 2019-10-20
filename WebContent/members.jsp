@@ -51,9 +51,15 @@
                 </tr>
                 <tr>
                     <th scope="row">5</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>Milad</td>
+                    <td>Esmailpour</td>
+                    <td>101124172</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Parisa</td>
+                    <td>Khataei</td>
+                    <td>101111190</td>
                 </tr>
           </tbody>
     </table>
